@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* left logo */}
         <div>
-          <Link to="/" className=" text-2xl  font-bold ">
+          <Link to="/" className=" text-2xl  font-bold tracking-tighter">
             WearSmart
           </Link>
         </div>
