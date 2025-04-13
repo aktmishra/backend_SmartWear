@@ -2,16 +2,16 @@ import React from "react";
 import { HiXMark } from "react-icons/hi2";
 import CartContent from "../Cart/CartContent";
 
-const CartDrawer = ({ drawerOpen, drawerToggle }) => {
+const CartDrawer = ({ cartDrawerOpen, toggleCartDrawer }) => {
   return (
     <div
-      className={`flex flex-col fixed top-0 right-0 w-full sm:w-1/2 md:w-2/4  h-full  bg-white shadow-2xl transform transition-transform duration-300 z-50 ${
-        drawerOpen ? "translate-x-0" : "translate-x-full"
+      className={`flex flex-col fixed top-0 right-0 w-full sm:w-1/2 md:w-1/3  h-full  bg-white shadow-2xl transform transition-transform duration-300 z-50 ${
+        cartDrawerOpen ? "translate-x-0" : "translate-x-full"
       } `}
     >
       {/* close button */}
       <div className="flex justify-end p-4">
-        <button onClick={drawerToggle}>
+        <button onClick={toggleCartDrawer}>
           <HiXMark className="h-6 w-6" />
         </button>
       </div>
