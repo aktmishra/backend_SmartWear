@@ -7,7 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-t py-12   ">
+    <footer className="border-t mt-16 pt-6 ">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 gap-8  px-4 ">
         <div>
           <h3 className="text-lg text-gray-800 mb-4 ">Newsletter</h3>
@@ -151,7 +151,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="container mx-auto mt-12 px-4 border-t border-gray-300 pt-6">
+      <div className="container mx-auto mt-12 px-4 border-t border-gray-300 py-5">
         <p className=" text-gray-500 text-sm tracking-tighter text-center ">© 2025, WearSmart. All Rights Reserved</p>
       </div>
     </footer>
