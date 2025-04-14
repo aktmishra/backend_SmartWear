@@ -5,7 +5,7 @@ import featured from "../../assets/featured.webp";
 const FeaturedCollection = () => {
   return (
     <section className="pt-16 px-4">
-      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl ">
+      <div className="container mx-auto lg:max-h-[600px] flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl ">
         {/* Left Content */}
 
         <div className="lg:w-1/2 p-8 text-center lg:text-left ">
@@ -32,7 +32,7 @@ const FeaturedCollection = () => {
           <img
             src={featured}
             alt="Featured Collection"
-            className="w-full h-full object-cover max-lg:rounded-tl-3xl rounded-tr-3xl lg:rounded-tr-3xl lg:rounded-br-3xl"
+            className="w-full lg:max-h-[600px] object-fill max-lg:rounded-tl-3xl rounded-tr-3xl lg:rounded-tr-3xl lg:rounded-br-3xl"
           />
         </div>
       </div>
