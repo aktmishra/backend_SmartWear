@@ -131,19 +131,10 @@ const NewArrival = () => {
       const clientWidth = container.clientWidth;
       const containerScrollWidth = container.scrollWidth;
       const rightScrollable = containerScrollWidth > scrollLeft + clientWidth;
-      console.log(rightScrollable);
+
       setCanScrollLeft(scrollLeft > 0);
       setCanScrollRight(rightScrollable);
     }
-
-    console.log({
-      scrollLeft: container.scrollLeft,
-
-      clientWidth: container.clientWidth,
-      containerScrollWidth: container.scrollWidth,
-      offsetleft: scrollRef.current.offsetLeft,
-    });
-    console.log({ container });
   };
 
   useEffect(() => {
@@ -179,7 +170,7 @@ const NewArrival = () => {
         {newArrivals.map((product) => (
           <div
             key={product._id}
-            className="min-w-[100%] sm:min-w-[50%] lg:min-w-[30%] relative  "
+            className="min-w-[100%] sm:min-w-[50%] lg:min-w-[30%] relative border rounded-lg border-gray-300 "
           >
             <img
               src={product.images[0]?.url}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
+import ProductGrid from "./ProductGrid";
 
 const ProductDetails = () => {
   const [mainImage, setMainImage] = useState(null);
@@ -29,6 +30,96 @@ const ProductDetails = () => {
       },
     ],
   };
+  const similarProducts = [
+    {
+      _id: "1",
+      name: "Shirt",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=1",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+    {
+      _id: "2",
+      name: "Jeans",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=2",
+          altText: "Jeans",
+        },
+      ],
+    },
+    {
+      _id: "3",
+      name: "T-shirt",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=3",
+          altText: "T-shirt",
+        },
+      ],
+    },
+    {
+      _id: "4",
+      name: "Stylis Jacket",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=4",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+    {
+      _id: "5",
+      name: "Stylis Jacket",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=5",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+    {
+      _id: "6",
+      name: "Stylis Jacket",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=6",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+    {
+      _id: "7",
+      name: "Stylis Jacket",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=7",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+    {
+      _id: "8",
+      name: "Stylis Jacket",
+      price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=8",
+          altText: "Stylish Jacket",
+        },
+      ],
+    },
+  ];
 
   const handleQuantityChange = (action) => {
     if (action === "plus") setQuantity((prev) => prev + 1);
@@ -55,11 +146,9 @@ const ProductDetails = () => {
   useEffect(() => {
     if (selectedProduct?.images?.length > 0) {
       setMainImage(selectedProduct.images[0].url);
-      console.log("Initial main image set to:", selectedProduct.images[0].url);
     }
   }, []);
 
-  console.log("Current main image:", mainImage);
   return (
     <div className="p-6">
       <div className="max-w-6xl mx-auto bg-white p-2 rounded-lg">
@@ -77,7 +166,6 @@ const ProductDetails = () => {
                     : "border-gray-300"
                 } `}
                 onClick={() => {
-                  console.log("Thumbnail clicked:", image.url); // Debugging line
                   setMainImage(image.url);
                 }}
               />
@@ -106,7 +194,6 @@ const ProductDetails = () => {
                     : "border-gray-300"
                 } `}
                 onClick={() => {
-                  console.log("Thumbnail clicked:", image.url); // Debugging line
                   setMainImage(image.url);
                 }}
               />
@@ -218,8 +305,11 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="mt-16">
-          <h2 className="text-2xl text-center font-medium">You May Also Like</h2>
+          <h2 className="text-3xl font-bold text-center mt-8 mb-4">
+            You May Also Like
+          </h2>
           {/* Product Grid */}
+          <ProductGrid products={similarProducts}></ProductGrid>
         </div>
       </div>
     </div>
