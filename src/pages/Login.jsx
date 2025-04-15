@@ -87,7 +87,7 @@ const Login = () => {
           <img
             src={login}
             alt="loginImg"
-            className="h-[700px] w-full object-cover"
+            className="min-h-[700px] w-full object-cover"
           />
         </div>
       </div>
